@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="@dimen/_3sdp"
+        android:padding="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_item">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civImage"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:src="@color/colorGrey"
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvTweet"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/AppTheme.Text"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center_vertical"
+            android:text="Dipti Joshi"
+            android:paddingBottom="0dp"
+            app:layout_constraintBottom_toTopOf="@id/tvTweet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/civImage"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tvTweet"
+            style="@style/AppTheme.Text"
+            android:gravity="center_vertical"
+            android:text="Failure is the key to success"
+            android:paddingTop="0dp"
+            android:minLines="1"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toTopOf="@id/tvRetweetCount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <ImageView
+        android:id="@+id/ivRetweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvRetweetCount"
+        app:layout_constraintTop_toBottomOf="@id/tvTweet"
+        android:src="@drawable/retweet"/>
+        <TextView
+            android:id="@+id/tvRetweetCount"
+            style="@style/AppTheme.Text"
+            android:gravity="center_vertical"
+            android:hint="12 k"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toEndOf="@id/ivRetweet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivFavorite"
+            app:layout_constraintTop_toBottomOf="@id/tvTweet" />
+    <ImageView
+        android:id="@+id/ivFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintStart_toEndOf="@id/tvRetweetCount"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvFavoriteCount"
+        app:layout_constraintTop_toBottomOf="@id/tvTweet"
+        android:src="@drawable/favorite"/>
+    <TextView
+        android:id="@+id/tvFavoriteCount"
+        style="@style/AppTheme.Text"
+        android:gravity="center_vertical"
+        android:hint="12 k"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toEndOf="@id/ivFavorite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTweet" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
