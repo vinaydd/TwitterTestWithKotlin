@@ -70,12 +70,6 @@ class SweetTweetActivity : AppCompatActivity() {
     private fun setupUI() {
         rvTweet.layoutManager = LinearLayoutManager(this)
         adapter = TweetAdapter(arrayListOf())
-//        rvTweet.addItemDecoration(
-//            DividerItemDecoration(
-//                rvTweet.context,
-//                (rvTweet.layoutManager as LinearLayoutManager).orientation
-//            )
-//        )
         rvTweet.adapter = adapter
     }
 
