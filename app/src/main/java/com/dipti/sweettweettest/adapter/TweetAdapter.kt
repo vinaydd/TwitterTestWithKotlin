@@ -10,7 +10,7 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.adapter_tweet.view.*
 
 class TweetAdapter (private val tweets: ArrayList<Tweet>) : RecyclerView.Adapter<TweetAdapter.DataViewHolder>() {
-
+//test wi
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(tweet: Tweet) {
